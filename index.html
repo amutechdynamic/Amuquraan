@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quran Web App</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1>📖 AmuQuran</h1>
+
+
+        <button id="darkModeBtn">
+            🌙
+        </button>
+
+    </header>
+
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>📖 Quran Kareem</h1>
+
+            <p>
+                Read, Listen and Memorize the Holy Quran
+            </p>
+
+            <a href="read.html?surah=1" class="start-btn">
+                Start Reading
+            </a>
+
+        </div>
+
+    </section>
+    <div class="daily-ayah">
+
+        <h3>Daily Ayah</h3>
+
+        <p id="dailyAyah">
+            Loading...
+        </p>
+
+    </div>
+    <section class="continue-reading">
+
+        <h2>Continue Reading</h2>
+
+        <div id="continueCard">
+            <p>No recent reading.</p>
+        </div>
+
+    </section>
+
+
+
+    <section class="surah-container">
+
+        <h2>Surah List</h2>
+
+
+        <input type="text" id="search" placeholder="Search Surah...">
+
+
+        <div id="surahList">
+
+        </div>
+
+
+    </section>
+    <nav class="bottom-nav">
+
+        <a href="index.html" class="active">
+            <span>🏠</span>
+            <p>Home</p>
+        </a>
+
+        <a href="read.html?surah=1">
+            <span>📖</span>
+            <p>Read</p>
+        </a>
+
+        <a href="favorites.html">
+            <span>❤️</span>
+            <p>favorites</p>
+        </a>
+
+        
+
+        <a href="dashboard.html">
+            <span>📊</span>
+            <p>Dashboard</p>
+        </a>
+
+        <a href="settings.html">
+            <span>⚙️</span>
+            <p>Settings</p>
+        </a>
+
+        
+
+    </nav>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/theme.js"></script>
+
+</body>
+
+</html>

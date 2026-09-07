@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Read Quran</title>
+
+    <link rel="stylesheet" href="css/read.css">
+</head>
+
+<body>
+
+    <header>
+
+        <a href="index.html">← Back</a>
+
+        <h2 id="surahTitle">Loading...</h2>
+
+    
+        <button onclick="favoriteSurah()">❤️</button>
+
+
+        <div class="icons">
+            <button id="bookmarkBtn">🔖</button>
+            <button id="settingsBtn">⚙️</button>
+        </div>
+
+
+
+    </header>
+    <div class="repeat-controls">
+
+        <label>Repeat:</label>
+
+        <button onclick="setRepeat(1)">1x</button>
+
+        <button onclick="setRepeat(3)">3x</button>
+
+        <button onclick="setRepeat(5)">5x</button>
+
+        <button onclick="setRepeat(10)">10x</button>
+
+    </div>
+    <input type="text" id="searchAyah" placeholder="Search in this Surah...">
+
+    <main id="ayahContainer">
+
+    </main>
+    <audio id="audioPlayer" controls style="display:none;"></audio>
+    <div id="toast"></div>
+
+    <div class="font-controls">
+        <button onclick="changeFontSize(-2)">A-</button>
+        <button onclick="changeFontSize(2)">A+</button>
+    </div>
+
+    <div class="progress-container">
+        <div id="progressBar"></div>
+    </div>
+    <div id="settingsPanel" class="settings-panel">
+
+        <h3>Reading Settings</h3>
+
+        <label>Translation</label>
+
+        <select id="translationSelect">
+            <option value="en">English</option>
+            <option value="ha">Hausa (Coming Soon)</option>
+        </select>
+
+        <label>Arabic Font Size</label>
+
+        <input type="range" id="fontSlider" min="24" max="60" value="42">
+
+        <button id="closeSettings">
+            Close
+        </button>
+
+    </div>
+    <nav class="bottom-nav">
+
+        <a href="index.html" class="active">
+            <span>🏠</span>
+            <p>Home</p>
+        </a>
+
+        <a href="read.html?surah=1">
+            <span>📖</span>
+            <p>Read</p>
+        </a>
+
+        <a href="favorites.html">
+            <span>❤️</span>
+            <p>favorites</p>
+        </a>
+
+        
+
+        <a href="dashboard.html">
+            <span>📊</span>
+            <p>Dashboard</p>
+        </a>
+
+        <a href="settings.html">
+            <span>⚙️</span>
+            <p>Settings</p>
+        </a>
+
+        
+
+    </nav>
+</body>
+
+<script src="js/read.js"></script>
+<script src="js/theme.js"></script>
+
+</html>
