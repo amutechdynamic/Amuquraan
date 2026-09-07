@@ -1,0 +1,244 @@
+/* ===========================
+   AZKHAR PAGE
+=========================== */
+
+:root{
+    --primary:#0f9d58;
+    --primary-dark:#0b7a44;
+    --bg:#f5f7f9;
+    --card:#ffffff;
+    --text:#222;
+    --text-light:#666;
+    --border:#e6e6e6;
+    --shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+body.dark{
+    --bg:#121212;
+    --card:#1d1d1d;
+    --text:#f5f5f5;
+    --text-light:#bdbdbd;
+    --border:#2d2d2d;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.azkhar-header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 20px;
+    background:var(--card);
+    border-bottom:1px solid var(--border);
+}
+
+.azkhar-header h1{
+    font-size:22px;
+    font-weight:700;
+}
+
+.back-btn,
+#searchBtn{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:var(--bg);
+    color:var(--text);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    text-decoration:none;
+    font-size:18px;
+}
+
+/* ===========================
+   HERO CARD
+=========================== */
+
+.hero-card{
+    margin:20px;
+    padding:24px;
+    border-radius:20px;
+    background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+    color:#fff;
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+
+.hero-card h2{
+    margin-bottom:10px;
+}
+
+.hero-card p{
+    line-height:1.6;
+    margin-bottom:12px;
+}
+
+.hero-card span{
+    font-size:14px;
+    opacity:.9;
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.search-box{
+    padding:0 20px;
+}
+
+.search-box input{
+    width:100%;
+    padding:15px;
+    border-radius:14px;
+    border:1px solid var(--border);
+    background:var(--card);
+    color:var(--text);
+    outline:none;
+    font-size:15px;
+}
+
+/* ===========================
+   CATEGORY GRID
+=========================== */
+
+.categories{
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:16px;
+}
+
+.category-card{
+    background:var(--card);
+    border-radius:18px;
+    padding:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:var(--shadow);
+    transition:.3s;
+    cursor:pointer;
+}
+
+.category-card:hover{
+    transform:translateY(-4px);
+}
+
+.category-left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.category-icon{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:rgba(15,157,88,.12);
+    color:var(--primary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+}
+
+.category-info h3{
+    margin-bottom:4px;
+    font-size:17px;
+}
+
+.category-info p{
+    color:var(--text-light);
+    font-size:14px;
+}
+
+/* ===========================
+   QUICK ACCESS
+=========================== */
+
+.quick-access{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    padding:0 20px 100px;
+}
+
+.quick-access a{
+    background:var(--card);
+    padding:16px;
+    border-radius:16px;
+    text-align:center;
+    text-decoration:none;
+    color:var(--text);
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.quick-access a:hover{
+    background:var(--primary);
+    color:#fff;
+}
+
+/* ===========================
+   BOTTOM NAV
+=========================== */
+
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:70px;
+    background:var(--card);
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    border-top:1px solid var(--border);
+}
+
+.bottom-nav a{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-decoration:none;
+    color:var(--text-light);
+    font-size:13px;
+}
+
+.bottom-nav a i{
+    font-size:20px;
+    margin-bottom:4px;
+}
+
+.bottom-nav a.active{
+    color:var(--primary);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:768px){
+
+    .categories{
+        grid-template-columns:1fr;
+    }
+
+    .quick-access{
+        grid-template-columns:1fr;
+    }
+
+}
